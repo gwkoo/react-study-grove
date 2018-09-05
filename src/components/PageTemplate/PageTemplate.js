@@ -16,7 +16,6 @@ export default class PageTemplate extends Component {
             ex) <PageTemplate> aaa </PageTemplate> 을 외부에서 사용시  
             {this.props.children} 으로 children 프로퍼티를 가져올 경우 aaa가 들어 있다.
         */
-        console.log(this.props);
         return (
             <div className={cx('page-template')}>
                 <h1>일정 관리</h1>
