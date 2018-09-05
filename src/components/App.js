@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PageTemplate from './PageTemplate';
 import TodoInput from './TodoInput';
-import TodoList from './TodoList';
+import TodoList from './TodoList/TodoList';
 
 class App extends Component {
   render() {
