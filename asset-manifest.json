@@ -1,8 +1,6 @@
 {
-  "main.js": "static/js/main.d72d1751.js",
-  "main.js.map": "static/js/main.d72d1751.js.map",
-  "static/media/PageTemplate.scss": "static/media/PageTemplate.8ce6a633.scss",
-  "static/media/TodoInput.scss": "static/media/TodoInput.e79e4070.scss",
-  "static/media/TodoItem.scss": "static/media/TodoItem.9620a203.scss",
-  "static/media/main.scss": "static/media/main.ca1b5164.scss"
+  "main.css": "static/css/main.5156ac91.css",
+  "main.css.map": "static/css/main.5156ac91.css.map",
+  "main.js": "static/js/main.52cb8fd8.js",
+  "main.js.map": "static/js/main.52cb8fd8.js.map"
 }
