@@ -13,7 +13,7 @@ export default class TodoItem extends Component {
                 <input className={cx('tick')} type="checkbox" checked={done} readOnly/>
                 <div className={cx('text', {done})}>{children}</div>
                 <div className={cx('delete')} onClick={(e) => {
-                    e.stopPropagation()
+                    e.stopPropagation();
                     onRemove()
                     
                     }   
