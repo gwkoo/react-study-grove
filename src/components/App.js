@@ -7,50 +7,52 @@ const initialTodos = new Array(500).fill(0).map((foo, index) => ({id: index, tex
 
 export default class App extends Component {
 
-  state = {
-    id: 1,
-    input: '',
-    todoList: initialTodos
-    // todoList: [
-    //   { id: 0, text: '리액트 공부하기', done: true },
-    //   { id: 1, text: '컴포넌트 스타일링 해보기', done: false }
-    // ]
-  }
-  
+    state = {
+        id: 1,
+        input: '',
+        todoList: initialTodos
+        // todoList: [
+        //   { id: 0, text: '리액트 공부하기', done: true },
+        //   { id: 1, text: '컴포넌트 스타일링 해보기', done: false }
+        // ]
+    };
+
   // TodoInput Component 관련 함수
   _handleChange = (e) => {
       const { value } = e.target;
       this.setState({
         input: value
       })
-  }
+  };
 
   _handleInsert = () => {
     const { todoList, input, id } = this.state;
-    let increaseId = id + 1
+    let increaseId = id + 1;
 
     const newTodo = {
       id: increaseId,
       text: input,
       done: false
-    }
-    
+    };
+
     this.setState({
       id: increaseId,
       todoList: [...todoList, newTodo],
       input: ''
     })
-  }
+  };
 
   // TodoList 내부 TodoItem 관련 함수
   _handleToggle = (id) => {
+    // id로 배열의 인덱스 찾기
     const { todoList } = this.state;
     const itemIdx = todoList.findIndex(item => item.id === id);
-    
+
+    // 찾은 데이터의 done 값 반전
     const toggledItem = {
       ...todoList[itemIdx],
       done: !todoList[itemIdx].done
-    }
+    };
 
     this.setState({
       todoList: [
@@ -59,7 +61,7 @@ export default class App extends Component {
         ...todoList.slice(itemIdx+1, todoList.length)
       ]
     })
-  }
+  };
 
   _handleRemove = (id) => {
     const { todoList } = this.state;
@@ -71,7 +73,7 @@ export default class App extends Component {
         ...todoList.slice(itemIdx+1, todoList.length)
       ]
     })
-  }
+  };
 
   render() {
     // this(Component) 에서 찾아서 매핑 해야된다. 상위를 보내야지 하위의 키를 찾아서 매핑함
